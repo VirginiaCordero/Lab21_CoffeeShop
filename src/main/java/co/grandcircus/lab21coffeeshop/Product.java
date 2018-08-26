@@ -1,21 +1,28 @@
 package co.grandcircus.lab21coffeeshop;
 
-import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Items implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+@Entity
+@Table(name="Items")
+public class Product {
 	
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)	
 	private Long id;
 	private String name;
+	@Column(length=40)
 	private String description;
 	private Integer quantity;
 	private Float price;
 	
-	public Items() {
+	public Product() {
 	}
 	
-	public Items(Long id, String name, String description, Integer quantity, Float price ) {
+	public Product(Long id, String name, String description, Integer quantity, Float price ) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -57,7 +64,7 @@ public class Items implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Items [id=" + id + ", name=" + name + ", description=" + description + ", quantity=" + quantity
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", quantity=" + quantity
 				+ ", price=" + price + "]";
 	}
 	

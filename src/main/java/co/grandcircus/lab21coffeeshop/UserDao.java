@@ -19,8 +19,8 @@ public class UserDao {
 	}
 
 	public void create(User user) {
-		String sql = "INSERT INTO Users (firstname, lastname, password, phonenumber, e-mail, termsandconditions, offersandpromos) VALUES (?, ?, ?, ?, ?, ?, ?)";
-		jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getPassword(), user.getPhonenumber(), user.getEmail(), user.getTermsandconditions() );
+		String sql = "INSERT INTO users (firstname, lastname, password, phonenumber, email, termsandconditions, offersandpromos) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getPassword(), user.getPhonenumber(), user.getEmail(), user.getTermsandconditions(), user.getOffersandpromos() );
 	}	
 
 

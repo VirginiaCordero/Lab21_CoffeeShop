@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<a href="/">Go back to Menu</a>	
 	<div id="form-container">
 		<form action="/summary" method="post">
 			<fieldset>

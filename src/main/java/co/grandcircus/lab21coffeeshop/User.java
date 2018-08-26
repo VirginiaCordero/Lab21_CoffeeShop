@@ -6,7 +6,7 @@ public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;	
 	
-	private Long id;
+//	private Long id;
 	private String firstname;
 	private String lastname;
 	private String phonenumber;
@@ -17,8 +17,9 @@ public class User implements Serializable {
 	
 	public User() {}
 	
-	public User(Long id, String firstname, String lastname, String phonenumber, String email, String password, String
+	public User(String firstname, String lastname, String phonenumber, String email, String password, String
 			termsandconditions, String offersandpromos) {
+		
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.phonenumber = phonenumber;
@@ -27,6 +28,13 @@ public class User implements Serializable {
 		this.termsandconditions = termsandconditions;
 		this.offersandpromos = offersandpromos;
 	}
+	
+//	public Long getId() {
+//		return id;
+//	}
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
 
 	public String getFirstname() {
 		return firstname;
